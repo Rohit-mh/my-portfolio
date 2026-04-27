@@ -1,5 +1,5 @@
 // ==========================================
-// Prakash Mishra — AI Developer Portfolio
+// Rohit Hadagali — AI/ML Engineer Portfolio
 // Neural network, animations, interactions
 // ==========================================
 
@@ -172,13 +172,13 @@ window.addEventListener('scroll', () => {
     const el = document.getElementById('typewriter');
     if (!el) return;
     const texts = [
-        'AI Developer',
-        'Copilot Agent Builder',
-        'Multi-Agent Architect',
-        'Generative AI Engineer',
-        'RAG & LLM Specialist',
-        'Python Backend Expert',
-        'Cloud Solutions Developer'
+        'AI/ML Engineer',
+        'Backend Developer',
+        'Multi-Agent Systems Builder',
+        'RAG Pipeline Engineer',
+        'Voice AI Developer',
+        'MCP • LCEL • Prompting',
+        'FastAPI • Docker • Kubernetes'
     ];
     let ti = 0, ci = 0, deleting = false, delay = 100;
 
@@ -207,7 +207,14 @@ window.addEventListener('scroll', () => {
 // ===== Counter Animation =====
 function animateCounters() {
     document.querySelectorAll('.stat-number').forEach(counter => {
-        const target = parseFloat(counter.dataset.count);
+        const raw = counter.dataset.count;
+        const target = parseFloat(raw);
+
+        if (isNaN(target)) {
+            counter.textContent = raw;
+            return;
+        }
+
         const isFloat = target % 1 !== 0;
         const duration = 2000;
         const step = target / (duration / 16);

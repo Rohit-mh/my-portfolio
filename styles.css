@@ -542,8 +542,8 @@ body {
   animation: fadeSlideUp 0.8s ease both;
 }
 .profile-ring {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   padding: 4px;
   background: linear-gradient(135deg, var(--primary), var(--accent), var(--accent2));
@@ -1225,8 +1225,9 @@ body {
   color: var(--primary-light);
 } /* ======================================   CERTIFICATIONS   ====================================== */
 .certs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
 }
 .cert-card {
@@ -1751,8 +1752,8 @@ body {
     font-size: 2.2rem;
   }
   .profile-ring {
-    width: 110px;
-    height: 110px;
+    width: 150px;
+    height: 150px;
   }
   .hero-stats {
     flex-direction: column;
@@ -1766,7 +1767,8 @@ body {
     grid-template-columns: 1fr;
   }
   .certs-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
   }
   .hero-role-wrapper {
     font-size: 0.9rem;
