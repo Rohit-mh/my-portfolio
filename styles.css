@@ -714,6 +714,7 @@ body {
   position: relative;
   z-index: 1;
   width: 100%;
+  overflow-x: hidden;
 }
 .section-dark {
   background: var(--bg-darker);
@@ -754,6 +755,8 @@ body {
   color: var(--text-secondary);
   margin-bottom: 16px;
   font-size: 1.02rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .about-text strong {
   color: var(--text-primary);
@@ -815,6 +818,7 @@ body {
   box-shadow:
     var(--shadow),
     0 0 40px rgba(124, 58, 237, 0.08);
+  max-width: 100%;
 }
 .code-header {
   display: flex;
@@ -1746,12 +1750,20 @@ body {
   }
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
   .about-lead {
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
+  }
+  .about-text p {
+    font-size: 0.9rem;
+  }
+  .about-visual {
+    margin-top: 30px;
   }
   .code-window {
+    max-width: 100%;
+    overflow-x: auto;
     font-size: 0.75rem;
   }
   .code-body {
