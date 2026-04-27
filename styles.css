@@ -36,8 +36,12 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 body {
+  width: 100%;
   font-family:
     "Inter",
     -apple-system,
@@ -413,6 +417,7 @@ body {
   position: relative;
   z-index: 1;
   overflow: hidden;
+  width: 100%;
 } /* Grid background */
 .hero-bg-grid {
   position: absolute;
@@ -485,6 +490,8 @@ body {
   position: relative;
   z-index: 2;
   max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
 } /* Badge */
 .hero-badge {
   display: inline-flex;
@@ -706,6 +713,7 @@ body {
   padding: 100px 0;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 .section-dark {
   background: var(--bg-darker);
@@ -1730,6 +1738,7 @@ body {
     width: 100%;
     max-width: 320px;
     margin: 0 auto 40px;
+    align-items: center;
   }
   .hero-actions .btn {
     width: 100%;
@@ -1818,12 +1827,12 @@ body {
   }
 }
 @media (max-width: 480px) {
+  html {
+    position: relative;
+  }
   .hero-name {
     font-size: 2rem;
     letter-spacing: -0.5px;
-  }
-  .hero-line {
-    font-size: 0.9rem;
   }
   .profile-ring {
     width: 140px;
@@ -1868,5 +1877,11 @@ body {
   .btn-large {
     padding: 14px 28px;
     font-size: 0.95rem;
+  }
+  .hero-orb {
+    display: none;
+  }
+  .hero-actions {
+    align-items: center;
   }
 }
