@@ -1717,9 +1717,12 @@ body {
   }
   .container {
     padding: 0 16px;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   .section {
     padding: 60px 0;
+    overflow-x: hidden;
   }
   .section-header {
     margin-bottom: 40px;
@@ -1736,6 +1739,7 @@ body {
   }
   .hero-description {
     font-size: 0.95rem;
+    padding: 0 8px;
   }
   .hero-actions {
     flex-direction: column;
@@ -1748,27 +1752,62 @@ body {
     width: 100%;
     justify-content: center;
   }
+  /* --- About section mobile fix --- */
   .about-grid {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+  .about-text {
+    max-width: 100%;
+    overflow-x: hidden;
   }
   .about-lead {
     font-size: 0.95rem !important;
   }
   .about-text p {
     font-size: 0.9rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+    max-width: 100%;
+  }
+  .about-details {
+    max-width: 100%;
+  }
+  .detail-item {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+  .detail-value {
+    font-size: 0.88rem;
+    word-break: break-word;
   }
   .about-visual {
     margin-top: 30px;
+    max-width: 100%;
+    overflow: hidden;
   }
+  /* --- Code window mobile fix --- */
   .code-window {
     max-width: 100%;
-    overflow-x: auto;
-    font-size: 0.75rem;
+    overflow: hidden;
   }
   .code-body {
     padding: 16px;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.72rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .code-body code {
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .float-element {
+    display: none;
   }
   .hero-stats {
     gap: 20px;
@@ -1803,6 +1842,10 @@ body {
   }
   .contact-card {
     padding: 14px 18px;
+  }
+  .contact-value {
+    word-break: break-word;
+    font-size: 0.85rem;
   }
   .chatbot-window {
     width: calc(100% - 32px);
@@ -1841,6 +1884,9 @@ body {
 @media (max-width: 480px) {
   html {
     position: relative;
+  }
+  body {
+    overflow-x: hidden;
   }
   .hero-name {
     font-size: 2rem;
@@ -1895,5 +1941,90 @@ body {
   }
   .hero-actions {
     align-items: center;
+  }
+  /* About section small screen */
+  .about-text p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    padding-right: 4px;
+  }
+  .about-lead {
+    font-size: 0.88rem !important;
+  }
+  .code-body {
+    font-size: 0.65rem;
+    padding: 12px;
+    line-height: 1.6;
+  }
+  .code-header {
+    padding: 10px 14px;
+  }
+  .code-title {
+    font-size: 0.72rem;
+  }
+  .code-live {
+    font-size: 0.6rem;
+  }
+  .timeline {
+    padding-left: 40px;
+  }
+  .timeline-node {
+    left: -32px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+  .timeline::before {
+    left: 16px;
+  }
+  .timeline-content {
+    padding: 16px 18px;
+  }
+  .timeline-role {
+    font-size: 1.05rem;
+  }
+  .timeline-details li {
+    font-size: 0.88rem;
+  }
+}
+/* Extra small devices */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 12px;
+  }
+  .hero {
+    padding: 90px 12px 30px;
+  }
+  .hero-name {
+    font-size: 1.7rem;
+  }
+  .hero-badge {
+    font-size: 0.72rem;
+    padding: 6px 12px;
+  }
+  .section {
+    padding: 40px 0;
+  }
+  .about-text p {
+    font-size: 0.82rem;
+  }
+  .code-body {
+    font-size: 0.6rem;
+    padding: 10px;
+  }
+  .detail-item {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  .detail-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
+  }
+  .detail-value {
+    font-size: 0.82rem;
+  }
+  .detail-label {
+    font-size: 0.68rem;
   }
 }
