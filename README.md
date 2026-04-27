@@ -44,7 +44,7 @@ Information Science undergraduate with hands-on experience building AI-powered s
 
 ## 🖼️ Profile image
 
-The hero image is referenced as `images/rohit.jpg` in `index.html`. Replace that file with your photo.
+The hero image is referenced as `images/Rohit_image.jpg` in `index.html`. Replace that file with your photo.
 
 ---
 
