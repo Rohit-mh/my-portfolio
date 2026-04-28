@@ -11,6 +11,8 @@ const resumeData = {
     email: "rohithadagali18@gmail.com",
     location: "Belagavi, India",
     experience_title: "AI/ML & Backend Engineer Intern",
+    experience_company: "Mahindra AI (Client)",
+    experience_location: "Mumbai",
     experience_duration: "Jan 2026 — Present",
     summary: "Information Science undergraduate with hands-on experience in agentic AI systems, multi-agent reasoning frameworks, RAG-based applications, voice AI systems, OCR + LLM pipelines, and DevOps with Docker & Kubernetes.",
     experience_details: [
@@ -77,7 +79,7 @@ function getResponse(input) {
 
     // Experience
     if (/experience|work(ed|ing)?|job|career|role|position|company|bristlecone|employ/i.test(q)) {
-        let resp = `💼 **${resumeData.experience_title}** (${resumeData.experience_duration})\n📍 ${resumeData.company_location}\n\n**Key Work:**\n`;
+        let resp = `💼 **${resumeData.experience_title}** at **${resumeData.experience_company}** (${resumeData.experience_duration})\n📍 ${resumeData.experience_location}\n\n**Key Work:**\n`;
         resumeData.experience_details.forEach(d => {
             resp += `• ${d}\n`;
         });
